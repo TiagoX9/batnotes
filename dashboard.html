@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="styleshhet" href="css/glyphicons-halflings-regular.woff">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <title>Bat Notes - "I´m noteman!"</title>
+</head>
+
+<body>
+    
+
+<!-- NAV BAR -->
+
+   <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 navigation">
+        
+            <img class="img img-responsive logo" src="https://mydevelopmentbook.files.wordpress.com/2016/04/batman-logo.png" alt="logobatman">
+                <span class="glyphicon glyphicon-search lupa" aria-hidden="true"> </span>
+                <span class "glyphicon glyphicon-remove-circle closeicon" aria-hidden="true"> </span>
+                <input type="text" class="form-control searchbar" placeholder="Search">
+            <button type="button" class="btn btn-default navbar-btn gobutton"></button>
+       
+            </div>
+        </div>
+    </div>
+
+
+<!-- SIDE BAR -->
+
+    <div class="container-fluid">
+        <div class="row">
+<div class="col-md-3 sidebar">
+<span class="elements">
+                    <h2>BatCave</h2>
+                    <span class="glyphicon glyphicon-th-large iconstext" aria-hidden="true">
+                     Notes </span><br>
+                    <span class="glyphicon glyphicon-pencil iconstext" aria-hidden="true">
+                    Edit</span><br>
+                    <span class="glyphicon glyphicon-cog iconstext" aria-hidden="true">
+                    Settings</span><br>
+                </span>
+</div>
+<div class="col-md-6">
+
+    <!--TEXT AREA -->
+
+    <div class="notesarea" id="notesarea">
+   <div class="input-stack">   
+   <textarea id="mainnote" class="form-control" type="text" placeholder="Gotham needs you!"></textarea>
+   <button id="savebutton" class="btn btn-default btnedit" type="submit" name="save"> <span id="saved" class="glyphicon glyphicon-ok "></span></button>
+   </div>
+  
+<!-- NOTE MENU -->
+
+   <div id="notemenu">
+     
+       <input type="text" class="optionbar" placeholder="Title">
+
+
+       <!-- NOTE MENU BUTTONS -->
+
+       <div class="btn-group btnedit">
+  <button type="button" href="#" class="btn btn-default dropdown-toggle menubutton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="glyphicon glyphicon-th "></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">Format text</a></li>
+    <li><a href="#">Insert Tag</a></li>
+    <li><a href="#">Code snippet</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">More Bat Options</a></li>
+  </ul>
+</div>
+<div class="btn-group btnedit">
+  <button type="button" class="btn btn-default dropdown-toggle menubutton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="glyphicon glyphicon-picture "></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">From file</a></li>
+    <li><a href="#">From URL</a></li>
+  </ul>
+</div>
+<div class="btn-group btnedit">
+  <button type="button" class="btn btn-default dropdown-toggle menubutton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="glyphicon glyphicon-calendar "></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a target="_blank" href="https://www.google.com/calendar/embed?src=domain.comrandomstring@group.calendar.google.com&ctz=America/Los_Angeles&gsessionid=OK">Google Calendar</a></li>
+    <li><a target="_blanK" href="webcal://calendar.google.com/calendar/ical/{YOUR_GCAL_ID}/public/basic.ics">iCloud Calendar</a></li>
+    <li><a href="#">Calendly</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+<div class="btn-group btnedit">
+  <button type="button" class="btn btn-default dropdown-toggle menubutton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="glyphicon glyphicon-transfer "></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparse.com">Facebook</a></li>
+    <li><a target="_blank" href="https://plus.google.com/share?url=YOUR_URL_HERE">Google +</a></li>
+    <li><a target="_blank" href="https://twitter.com/intent/tweet">Twitter</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="mailto:?subject=BatMail&amp.">Batmail</a></li>
+  </ul>
+</div>
+<div class="btn-group btnedit">
+  <button type="button" id="fullscreen" class="btn btn-default dropdown-toggle menubutton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="glyphicon glyphicon-fullscreen "></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>      
+   </div>
+    </div>  
+</div>
+ 
+<!-- BAT NOTES -->
+
+<div class="noteslibrary col-md-3">
+    <div id="iconstext">
+    BatNotes
+       <div id="editbutton" class="btn-group ">
+  <button type="button" class="btn btn-default btnedit" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="glyphicon glyphicon-pencil"></span>
+  </button>
+    </div>
+    
+    <div id="savednote" class="savednote">
+      
+    
+</div>
+    </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/jquery.js"></script>
+   
+    <script>
+$(document).ready(function(){
+    $("#notesarea").click(function(){
+        $("#notemenu").show("slow");
+    });
+    $("#notesarea").mouseleave(function(){
+        $("#notemenu").hide("slow");
+    });
+});
+</script>
+
+  <script>
+$( "#fullscreen" ).click(function() {
+  $( "#mainnote" ).css( {
+      "width" : "48vw",
+      "height": "100vh",
+      "margin": "0 auto" 
+      });
+});
+</script>
+<script>
+$( "#savebutton" ).click(function() {
+  $( "#saved" ).css( {
+      "color" : "#12e215"
+      });
+      });
+      $("#savedbutton").mouseleave(function(){
+        $('#saved').css({
+          'color':'black'
+        });
+      })
+
+        </script>
+
+<script type="text/javascript" src="js/bootstrap.min.js"></script>   
+</body>
+
+</html>

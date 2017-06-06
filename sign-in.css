@@ -1,0 +1,35 @@
+body{
+    background-color: #FFFFFF;
+}
+.batcontainer{
+height: 100%;
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 20px;
+  padding-right: 80px;
+}
+.battitle{
+    font-family:'Bangers', cursive;
+    font-size: 100px;
+    color: black;
+}
+
+.background{
+    margin: 0 auto;
+    background-size: 100vw;
+    height: auto;
+    position: relative;
+    background-image: url("img/background.jpg");
+    background-repeat: no-repeat;
+  
+}
+
+.formcontrol{
+     
+    border: solid 2px black;
+    border-radius: 18px;
+}
